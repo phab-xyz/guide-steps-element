@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('docs-src/docs.css');
   eleventyConfig.addPassthroughCopy('docs-src/.nojekyll');
   eleventyConfig.addPassthroughCopy(
-    'node_modules/@webcomponents/webcomponentsjs'
+    'node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js'
   );
   eleventyConfig.addPassthroughCopy('node_modules/lit/polyfill-support.js');
   return {

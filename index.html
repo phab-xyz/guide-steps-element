@@ -3,9 +3,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Custom Web Components</title>
+    <title>Lit Web Componemt Demo for dev</title>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="/node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="guide-steps.dev.js"></script>
+    <style>
+      p {
+        border: solid 1px blue;
+        padding: 8px;
+      }
+    </style>
   </head>
   <body>
-    <a href="/dev/index.html">Component Demo</a>
+    <h3>Web Componemt Demo</h3>
+    <guide-steps name="Test">
+      <p>This is child content</p>
+    </guide-steps>
   </body>
 </html>

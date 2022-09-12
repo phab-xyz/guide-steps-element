@@ -1,15 +1,15 @@
 {
-  "name": "@phab_xyz/guide-steps-element",
+  "name": "guide-steps",
   "private": true,
   "version": "1.0.4",
   "description": "A simple steps web component for guide-like website.",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "main": "guide-steps.js",
+  "module": "guide-steps.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
+    "clean": "rimraf guide-steps.{d.ts,d.ts.map,dev.js,js,js.map} test/guide-steps.{d.ts,d.ts.map,js,js.map} test/guide-steps_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:lit-analyzer": "lit-analyzer",
@@ -18,19 +18,19 @@
     "docs:clean": "rimraf docs",
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
-    "docs:build": "rollup -c --file docs/my-element.bundled.js",
+    "docs:build": "rollup -c --file docs/guide-steps.bundled.js",
     "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
     "docs:serve": "wds --root-dir=docs --node-resolve --watch",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "serve": "wds --watch",
+    "serve": "rollup -c rollup.dev.config.js && wds --watch",
     "serve:prod": "MODE=prod npm run serve",
     "test": "npm run test:dev && npm run test:prod",
     "test:dev": "wtr",
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup -c ; cat guide-steps.bundled.js | gzip -9 | wc -c ; rm guide-steps.bundled.js"
   },
   "keywords": [
     "web-components",
@@ -38,7 +38,7 @@
     "typescript",
     "lit"
   ],
-  "author": "Google LLC",
+  "author": "lonexw",
   "license": "BSD-3-Clause",
   "dependencies": {
     "lit": "^2.2.4"
@@ -50,6 +50,7 @@
     "@open-wc/testing": "^3.1.5",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@types/mocha": "^9.1.1",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "@web/dev-server": "^0.1.31",
@@ -59,6 +60,7 @@
     "eslint": "^8.15.0",
     "lit-analyzer": "^1.2.1",
     "prettier": "^2.6.2",
+    "prismjs": "^1.29.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.73.0",
     "rollup-plugin-summary": "^1.4.3",
