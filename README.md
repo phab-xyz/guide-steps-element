@@ -1,6 +1,12 @@
-# LitElement TypeScript starter
+# Web Component: guide-steps-element
 
-This project includes a sample component using LitElement with TypeScript.
+This project includes a component using LitElement with TypeScript, build with:
+
+- Node.js and npm for managing dependencies(pnpm). Requires Node.js 10 or greater.
+- A local dev server, [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/).
+- Linting with [ESLint](https://eslint.org/) and [lit-analyzer](https://www.npmjs.com/package/lit-analyzer).
+- Testing with [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
+- A static doc site built with [web-component-analyzer](https://www.npmjs.com/package/web-component-analyzer) and [eleventy](https://www.11ty.dev/).
 
 This template is generated from the `lit-starter-ts` package in [the main Lit
 repo](https://github.com/lit/lit). Issues and PRs for this template should be
