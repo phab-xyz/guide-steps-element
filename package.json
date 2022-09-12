@@ -1,7 +1,7 @@
 {
   "name": "guide-steps",
-  "private": true,
-  "version": "1.0.4",
+  "private": false,
+  "version": "0.0.1",
   "description": "A simple steps web component for guide-like website.",
   "main": "guide-steps.js",
   "module": "guide-steps.js",
